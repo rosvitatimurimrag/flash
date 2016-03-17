@@ -1,0 +1,33 @@
+import flash.events.MouseEvent;
+daire.stop();
+function oynat(event:MouseEvent):void
+{
+	daire.play();
+}
+basla.addEventListener(MouseEvent.MOUSE_DOWN, oynat);
+function dur(event:MouseEvent):void
+{
+	daire.stop();
+}
+durdur.addEventListener(MouseEvent.MOUSE_DOWN, dur);
+
+function ilerigit(event:MouseEvent):void
+{
+	daire.nextFrame();
+}
+ileri.addEventListener(MouseEvent.MOUSE_DOWN, ilerigit);
+
+function gerigit(event:MouseEvent):void
+{
+	daire.prevFrame();
+}
+geri.addEventListener(MouseEvent.MOUSE_DOWN, gerigit);
+
+
+function basagit(event:MouseEvent):void
+{
+	daire.gotoAndStop(1);
+}
+basadon.addEventListener(MouseEvent.MOUSE_DOWN, basagit);
+
+
